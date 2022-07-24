@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
+import SectionHeader from './partials/SectionHeader';
 
 const propTypes = {
   children: PropTypes.node,
@@ -40,6 +41,12 @@ const GenericSection = ({
     bottomDivider && 'has-bottom-divider'
   );
 
+  const sectionHeader = {
+    id: 'about-us',
+    title: 'About us',
+    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+  };
+
   return (
     <section
       {...props}
@@ -47,6 +54,7 @@ const GenericSection = ({
     >
       <div className="container">
         <div className={innerClasses}>
+        <SectionHeader data={sectionHeader} className="center-content" />
           {children}
         </div>
       </div>
