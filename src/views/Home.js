@@ -1,24 +1,26 @@
-import React from 'react';
+import React from "react";
 // import sections
-import Hero from '../components/sections/Hero';
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import FeaturesSplit from '../components/sections/FeaturesSplit';
-import Testimonial from '../components/sections/Testimonial';
-import Cta from '../components/sections/Cta';
-import GenericSection from "../components/sections/GenericSection";
+import Hero from "../components/sections/Hero";
+// import FeaturesTiles from '../components/sections/FeaturesTiles';
+import Projects from "../components/sections/Projects";
+import Testimonial from "../components/sections/Testimonial";
+// import Cta from '../components/sections/Cta';
+import AboutUs from "../components/sections/AboutUs";
 
 const Home = () => {
-
   return (
     <>
-      <Hero className="illustration-section-01"/>
-      {/* <FeaturesTiles /> */}
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
+      <Hero className="illustration-section-01" />
+      <AboutUs />
+      <Projects
+        invertMobile
+        topDivider
+        imageFill
+        className="illustration-section-02"
+      />
       <Testimonial topDivider />
-      <GenericSection/>
-      {/* <Cta split /> */}
     </>
   );
-}
+};
 
 export default Home;
