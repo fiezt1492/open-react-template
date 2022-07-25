@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import Logo from "./partials/Logo";
 import Projects from "../sections/Projects";
 import AboutUs from "../sections/AboutUs";
@@ -35,6 +35,8 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+  const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     isActive && openMenu();
@@ -80,9 +82,15 @@ const Header = ({
     className
   );
 
+  const pathHome = () => {
+    let path = `home`;
+    history.push(path);
+  };
+
   const scrollToRef = (ref) => {
     closeMenu();
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/home") pathHome();
+    else ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -119,7 +127,7 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#about-us" onClick={() => scrollToRef(AboutUs.ref)}>
+                      <Link to="/home" onClick={() => scrollToRef(AboutUs.ref)}>
                         About us
                       </Link>
                     </li>
@@ -131,20 +139,8 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#contact" onClick={closeMenu}>
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
                       <Link
-                        to="#projects"
+                        to="/home"
                         onClick={() => scrollToRef(Projects.ref)}
                       >
                         Projects
@@ -158,7 +154,7 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#faq" onClick={closeMenu}>
+                      <Link to="/home" onClick={closeMenu}>
                         FAQ's
                       </Link>
                     </li>
@@ -170,7 +166,19 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="#support" onClick={closeMenu}>
+                      <Link to="/contact" onClick={closeMenu}>
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="/support" onClick={closeMenu}>
                         Support
                       </Link>
                     </li>

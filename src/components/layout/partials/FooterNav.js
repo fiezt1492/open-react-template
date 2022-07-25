@@ -2,9 +2,9 @@ import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Button from "../../elements/Button";
-
 const FooterNav = ({ className, ...props }) => {
   const classes = classNames("footer-nav", className);
+  
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -19,13 +19,13 @@ const FooterNav = ({ className, ...props }) => {
     <nav {...props} className={classes}>
       <ul className="list-reset">
         <li>
-          <Link to="#contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="#about-us">About us</Link>
+          <Link to="/#about-us">About us</Link>
         </li>
         <li>
-          <Link to="#faq">FAQ's</Link>
+          <Link to="/#faq">FAQ's</Link>
         </li>
         <li>
           <Button color="light" onClick={scrollToTop}>
