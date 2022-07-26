@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { SectionSplitProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
@@ -11,8 +12,6 @@ const propTypes = {
 const defaultProps = {
   ...SectionSplitProps.defaults,
 };
-
-const ref = React.createRef()
 
 const Projects = ({
   className,
@@ -57,7 +56,7 @@ const Projects = ({
 
   return (
     <section {...props} className={outerClasses}>
-      <div ref={ref} className="container">
+      <div id="projects" className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
@@ -69,7 +68,11 @@ const Projects = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Discord Card-Game Bot
                 </div>
-                <h3 className="mt-0 mb-12">Recard</h3>
+                <h3 className="mt-0 mb-12">
+                  <a href="https://recard.owlvernyte.tk" target="_blank">
+                    Recard
+                  </a>
+                </h3>
                 <p className="m-0">
                   A bot game to testing out our card-game idea. We're planning
                   to make this game further more, not just on Discord. We would
@@ -101,13 +104,19 @@ const Projects = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Discord Music Bot
                 </div>
-                <h3 className="mt-0 mb-12">Hoot</h3>
+                <h3 className="mt-0 mb-12">
+                  <a href="https://hoot.owlvernyte.tk" target="_blank">
+                    Hoot
+                  </a>
+                </h3>
                 <p className="m-0">
                   It basically serving music for gamers on Discord! Created with{" "}
-                  <span className="text-color-primary">DisTube</span> core (a
-                  functional library for music). It provides high quality
-                  musics, supports a lot of music sites, custom playlist, music
-                  panel and more!
+                  <a href="https://distube.js.org" target="_blank">
+                    <span className="text-color-primary">DisTube</span>
+                  </a>{" "}
+                  core (a functional library for music). It provides high
+                  quality musics, supports a lot of music sites, custom
+                  playlist, music panel and more!
                 </p>
               </div>
               <div
@@ -166,6 +175,5 @@ const Projects = ({
 
 Projects.propTypes = propTypes;
 Projects.defaultProps = defaultProps;
-Projects.ref = ref
 
 export default Projects;

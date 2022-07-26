@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
-import ButtonGroup from "../elements/ButtonGroup";
-import Button from "../elements/Button";
+// import ButtonGroup from "../elements/ButtonGroup";
+// import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 
@@ -69,16 +69,16 @@ const Hero = ({
               >
                 We have wings!
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              {/* <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
                   <Button tag="a" color="primary" wideMobile href="#">
                     Get started
                   </Button>
-                  {/* <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
+                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
                     View on Github
-                    </Button> */}
+                    </Button>
                 </ButtonGroup>
-              </div>
+              </div> */}
             </div>
           </div>
           <div

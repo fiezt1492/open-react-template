@@ -9,7 +9,8 @@ import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
 import Home from "./views/Home";
-import Contact from "./views/Contact";
+import Faq from "./views/Faq";
+import Team from "./views/Team";
 import NotFound from "./views/NotFound";
 
 // Initialize Google Analytics
@@ -37,21 +38,27 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          {/* <AppRoute path="/home" element={<></>} layout={LayoutDefault} /> */}
           <AppRoute
             exact
             path="/home"
             component={Home}
             layout={LayoutDefault}
           />
+          {/* <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} /> */}
           <AppRoute
             exact
-            path="/contact"
-            component={Contact}
+            path="/team"
+            component={Team}
+            layout={LayoutDefault}
+          />
+          <AppRoute
+            exact
+            path="/not-found"
+            component={NotFound}
             layout={LayoutDefault}
           />
           <Redirect exact from="/" to="/home" />
-          <AppRoute path="*" component={NotFound} />
+          <Redirect exact from="*" to="/not-found" />
         </Switch>
       )}
     />

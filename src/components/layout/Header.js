@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import Logo from "./partials/Logo";
-import Projects from "../sections/Projects";
-import AboutUs from "../sections/AboutUs";
+import SmoothScroll from "../elements/SmoothScroll";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -31,7 +30,7 @@ const Header = ({
   bottomDivider,
   ...props
 }) => {
-  const [isActive, setIsactive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const nav = useRef(null);
   const hamburger = useRef(null);
@@ -52,13 +51,13 @@ const Header = ({
   const openMenu = () => {
     document.body.classList.add("off-nav-is-active");
     nav.current.style.maxHeight = nav.current.scrollHeight + "px";
-    setIsactive(true);
+    setIsActive(true);
   };
 
   const closeMenu = () => {
     document.body.classList.remove("off-nav-is-active");
     nav.current && (nav.current.style.maxHeight = null);
-    setIsactive(false);
+    setIsActive(false);
   };
 
   const keyPress = (e) => {
@@ -95,7 +94,7 @@ const Header = ({
 
   return (
     <header {...props} className={classes}>
-      <div className="container">
+      <div id="top" className="container">
         <div
           className={classNames(
             "site-header-inner",
@@ -120,30 +119,54 @@ const Header = ({
                 className={classNames("header-nav", isActive && "is-active")}
               >
                 <div className="header-nav-inner">
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
-                      <Link to="/home" onClick={() => scrollToRef(AboutUs.ref)}>
-                        About us
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
-                      <Link
-                        to="/home"
-                        onClick={() => scrollToRef(Projects.ref)}
+                  {window.location.pathname === "/home" ? (
+                    <>
+                      <ul
+                        className={classNames(
+                          "list-reset text-xs",
+                          navPosition && `header-nav-${navPosition}`
+                        )}
                       >
-                        Projects
+                        <li>
+                          <SmoothScroll to="about-us">About us</SmoothScroll>
+                        </li>
+                      </ul>
+                      <ul
+                        className={classNames(
+                          "list-reset text-xs",
+                          navPosition && `header-nav-${navPosition}`
+                        )}
+                      >
+                        <li>
+                          <SmoothScroll to="projects" onLinkClick={pathHome}>
+                            Projects
+                          </SmoothScroll>
+                        </li>
+                      </ul>
+                    </>
+                  ) : (
+                    <ul
+                      className={classNames(
+                        "list-reset text-xs",
+                        navPosition && `header-nav-${navPosition}`
+                      )}
+                    >
+                      <li>
+                        <Link to="/home" onClick={closeMenu}>
+                          Home
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
+                      navPosition && `header-nav-${navPosition}`
+                    )}
+                  >
+                    <li>
+                      <Link to="/faq" onClick={closeMenu}>
+                        FAQ
                       </Link>
                     </li>
                   </ul>
@@ -154,32 +177,8 @@ const Header = ({
                     )}
                   >
                     <li>
-                      <Link to="/home" onClick={closeMenu}>
-                        FAQ's
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
-                      <Link to="/contact" onClick={closeMenu}>
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li>
-                      <Link to="/support" onClick={closeMenu}>
-                        Support
+                      <Link to="/team" onClick={closeMenu}>
+                        Team
                       </Link>
                     </li>
                   </ul>

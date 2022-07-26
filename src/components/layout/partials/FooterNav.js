@@ -1,36 +1,25 @@
 import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import Button from "../../elements/Button";
+import SmoothScroll from "../../elements/SmoothScroll";
+
 const FooterNav = ({ className, ...props }) => {
   const classes = classNames("footer-nav", className);
-  
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // for smoothly scrolling
-    });
-  };
-
-  // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
   return (
     <nav {...props} className={classes}>
       <ul className="list-reset">
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/home">Home</Link>
         </li>
         <li>
-          <Link to="/#about-us">About us</Link>
+          <Link to="/faq">FAQ</Link>
         </li>
         <li>
-          <Link to="/#faq">FAQ's</Link>
+          <Link to="/team">Team</Link>
         </li>
-        <li>
-          <Button color="light" onClick={scrollToTop}>
-            Up
-          </Button>
+        <li title="Go to the top of this page">
+          <SmoothScroll to="top">Up</SmoothScroll>
         </li>
       </ul>
     </nav>
