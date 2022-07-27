@@ -4,7 +4,7 @@ import Team from "../components/sections/Team";
 const Contact = () => {
   return (
     <>
-      <Team />
+      <Team className="illustration-section-01" topDivider bottomDivider />
     </>
   );
 };

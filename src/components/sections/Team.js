@@ -1,4 +1,5 @@
 import React from "react";
+import ReactLoading from "react-loading";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
@@ -14,11 +15,8 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-const ref = React.createRef();
-
 const Team = ({
   className,
-  // children,
   topOuterDivider,
   bottomOuterDivider,
   topDivider,
@@ -28,6 +26,9 @@ const Team = ({
   pushLeft,
   ...props
 }) => {
+  const [members, setMembers] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const outerClasses = classNames(
     "testimonial section",
     topOuterDivider && "has-top-divider",
@@ -45,79 +46,64 @@ const Team = ({
 
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
-  const membersArray = [
-    {
-      name: "Fiezt",
-      quote: "I sit for at least 24 hours a day...",
-      rank: "Founder & Developer",
-      email: "fiezt@pm.me",
-    },
-    {
-      name: "Schjr",
-      quote: "I sit for at least 23 hours a day...",
-      rank: "Co-Founder & Developer",
-      email: "huynhnhattruonglt@gmail.com",
-    },
-    {
-      name: "Tyui",
-      quote: "I sit for at least 22 hours a day...",
-      rank: "Developer",
-      email: "tyuipham@gmail.com",
-    },
-    {
-      name: "Mei",
-      quote: "I sit for at least 21 hours a day...",
-      rank: "Manager",
-      email: "misatruong1242@gmail.com",
-    },
-    {
-      name: "Slimaeus",
-      quote: "I sit for at least 20 hours a day...",
-      rank: "Developer",
-      email: "nguyenhongthai28042002@gmail.com",
-    },
-    {
-      name: "Meelow",
-      quote: "I sit for at least 19 hours a day...",
-      rank: "Moderator & Tester",
-      email: "quockha081122@gmail.com",
-    },
-    {
-      name: "Shiro",
-      quote: "I sit for at least 18 hours a day...",
-      rank: "Tester",
-      email: "kebaothu1213@gmail.com",
-    },
-  ];
+  const getMembers = () => {
+    setIsLoading(true);
+    fetch("https://activity.fiezt1492.repl.co/api/teams")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success)
+          return data.data.map((member) => {
+            // console.log(member);
+            const data = {
+              name: member.more.name,
+              quote: member.more.quote,
+              rank: member.more.rank,
+              email: member.more.email,
+              avatar: member.avatar,
+              username: member.username,
+              discriminator: member.discriminator,
+            };
 
-  const memberCards = membersArray.map((member, index) => {
-    const data = { ...member };
-    data.delay = (index + 1) * 100;
+            return <MemberCard data={data} />;
+          });
+        else return false;
+      })
+      .then((array) => {
+        setMembers(array);
+        setIsLoading(false);
+      });
+  };
 
-    return <MemberCard data={data} />;
-  });
+  React.useEffect(() => {
+    getMembers();
+  }, []);
 
   return (
     <section {...props} className={outerClasses}>
-      <div ref={ref} className="container">
+      <div className="container">
         <div className={innerClasses}>
-          <div className="center-content">
-            <h1
-              className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
-            >
+          <div
+            className="center-content reveal-from-bottom"
+            data-reveal-delay="200"
+          >
+            <h1 className="mt-0 mb-16">
               The <span className="text-color-primary">Owls</span>
             </h1>
             <p>We're dreaming a better world!</p>
             <div className={tilesClasses}>
-              {memberCards}
-              {/* <MemberCard data={member_fiezt} />
-              <MemberCard data={member_schjr} />
-              <MemberCard data={member_tyui} />
-              <MemberCard data={member_mei} />
-              <MemberCard data={member_slimaeus} />
-              <MemberCard data={member_meelow} />
-              <MemberCard data={member_shiro} /> */}
+              <>
+                {!isLoading && members}
+                {isLoading && (
+                  <div>
+                    <ReactLoading
+                      type="spin"
+                      color="#6163FF"
+                      height={100}
+                      width={50}
+                    />
+                  </div>
+                )}
+              </>
             </div>
           </div>
         </div>
@@ -128,6 +114,5 @@ const Team = ({
 
 Team.propTypes = propTypes;
 Team.defaultProps = defaultProps;
-Team.ref = ref;
 
 export default Team;

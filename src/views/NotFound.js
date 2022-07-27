@@ -4,7 +4,7 @@ import NotFoundSection from "../components/sections/NotFound";
 const NotFound = () => {
   return (
     <>
-      <NotFoundSection />
+      <NotFoundSection className="illustration-section-01" />
     </>
   );
 };

@@ -9,23 +9,6 @@ const FooterSocial = ({ className, ...props }) => {
       <ul className="list-reset">
         <li>
           <a
-            href="https://www.facebook.com/owlvernyte"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Facebook</title>
-              <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a
             href="https://discord.gg/F7ZK6ssMUm"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,6 +27,45 @@ const FooterSocial = ({ className, ...props }) => {
             </svg>
           </a>
         </li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/owlvernyte"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Facebook</title>
+              <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.youtube.com/channel/UCEG5sgFKieaUuHsu5VG-kBg?view_as=subscriber?sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 50 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>YouTube</title>
+              <g>
+                <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z" />
+              </g>
+            </svg>
+          </a>
+        </li>
+
         <li>
           <a
             href="https://www.instagram.com/owlvernyte"
