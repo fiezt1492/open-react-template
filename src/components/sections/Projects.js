@@ -71,7 +71,7 @@ const Projects = ({
                   Discord Card-Game Bot
                 </div>
                 <h3 className="mt-0 mb-12">
-                  <a href="https://recard.owlvernyte.tk" target="_blank">
+                  <a href="https://top.gg/bot/853623967180259369" target="_blank">
                     Recard
                   </a>
                 </h3>
@@ -87,7 +87,7 @@ const Projects = ({
                       tag="a"
                       color="primary"
                       wideMobile
-                      href="https://recard.owlvernyte.tk"
+                      href="https://top.gg/bot/853623967180259369"
                       target="_blank"
                     >
                       Visit
@@ -120,7 +120,7 @@ const Projects = ({
                   Discord Music Bot
                 </div>
                 <h3 className="mt-0 mb-12">
-                  <a href="https://hoot.owlvernyte.tk" target="_blank">
+                  <a href="https://top.gg/bot/804616628359921684" target="_blank">
                     Hoot
                   </a>
                 </h3>
@@ -139,7 +139,7 @@ const Projects = ({
                       tag="a"
                       color="primary"
                       wideMobile
-                      href="https://hoot.owlvernyte.tk"
+                      href="https://top.gg/bot/804616628359921684"
                       target="_blank"
                     >
                       Visit
