@@ -53,7 +53,7 @@ const Projects = ({
 
   const sectionHeader = {
     title: "Projects we are working on",
-    paragraph: "We doing these projects while learning something.",
+    paragraph: "We do these projects while we're learning something.",
   };
 
   return (
@@ -62,7 +62,6 @@ const Projects = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
-
             <div id="recard" className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-left"

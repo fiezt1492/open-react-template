@@ -48,7 +48,7 @@ const AboutUs = ({
   const sectionHeader = {
     title: "About us",
     paragraph:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.",
+      "Ummm. Seem like we have nothing here. We're still building our story!",
   };
 
   return (
