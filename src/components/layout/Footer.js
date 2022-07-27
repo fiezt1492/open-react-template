@@ -40,6 +40,9 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             <div className="footer-copyright">
               © 2021 <a href="/">Owlvernyte</a>. All right reserved.
             </div>
+            <div className="footer-copyright">
+              Made with <a href="https://cruip.com">Cruip</a>
+            </div>
           </div>
         </div>
       </div>

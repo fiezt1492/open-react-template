@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { SectionSplitProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
+import ButtonGroup from "../elements/ButtonGroup";
+import Button from "../elements/Button";
 
 const propTypes = {
   ...SectionSplitProps.types,
@@ -60,7 +62,8 @@ const Projects = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
-            <div className="split-item">
+
+            <div id="recard" className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
@@ -79,6 +82,19 @@ const Projects = ({
                   like to bring it gameplay wider, such as on mobile and
                   desktop.
                 </p>
+                <div className="center-content mt-16">
+                  <ButtonGroup>
+                    <Button
+                      tag="a"
+                      color="primary"
+                      wideMobile
+                      href="https://recard.owlvernyte.tk"
+                      target="_blank"
+                    >
+                      Visit
+                    </Button>
+                  </ButtonGroup>
+                </div>
               </div>
               <div
                 className={classNames(
@@ -96,7 +112,7 @@ const Projects = ({
               </div>
             </div>
 
-            <div className="split-item">
+            <div id="hoot" className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-right"
                 data-reveal-container=".split-item"
@@ -118,6 +134,19 @@ const Projects = ({
                   quality musics, supports a lot of music sites, custom
                   playlist, music panel and more!
                 </p>
+                <div className="center-content mt-16">
+                  <ButtonGroup>
+                    <Button
+                      tag="a"
+                      color="primary"
+                      wideMobile
+                      href="https://hoot.owlvernyte.tk"
+                      target="_blank"
+                    >
+                      Visit
+                    </Button>
+                  </ButtonGroup>
+                </div>
               </div>
               <div
                 className={classNames(

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
-// import ButtonGroup from "../elements/ButtonGroup";
-// import Button from "../elements/Button";
+import ButtonGroup from "../elements/ButtonGroup";
+import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import SmoothScroll from "../elements/SmoothScroll";
 
 const propTypes = {
   ...SectionProps.types,
@@ -69,16 +70,24 @@ const Hero = ({
               >
                 We have wings!
               </p>
-              {/* <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="#">
-                    Get started
-                  </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                  <SmoothScroll to="recard">
+                    <Button tag="a" color="primary" wideMobile>
+                      Get started
                     </Button>
+                  </SmoothScroll>
+
+                  <Button
+                    tag="a"
+                    color="dark"
+                    wideMobile
+                    href="https://playerduo.com/owlvernyte"
+                  >
+                    Support us
+                  </Button>
                 </ButtonGroup>
-              </div> */}
+              </div>
             </div>
           </div>
           <div
