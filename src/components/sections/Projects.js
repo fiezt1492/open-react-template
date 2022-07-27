@@ -71,7 +71,11 @@ const Projects = ({
                   Discord Card-Game Bot
                 </div>
                 <h3 className="mt-0 mb-12">
-                  <a href="https://top.gg/bot/853623967180259369" target="_blank">
+                  <a
+                    href="https://top.gg/bot/853623967180259369"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Recard
                   </a>
                 </h3>
@@ -89,6 +93,7 @@ const Projects = ({
                       wideMobile
                       href="https://top.gg/bot/853623967180259369"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Visit
                     </Button>
@@ -120,13 +125,21 @@ const Projects = ({
                   Discord Music Bot
                 </div>
                 <h3 className="mt-0 mb-12">
-                  <a href="https://top.gg/bot/804616628359921684" target="_blank">
+                  <a
+                    href="https://top.gg/bot/804616628359921684"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Hoot
                   </a>
                 </h3>
                 <p className="m-0">
                   It basically serving music for gamers on Discord! Created with{" "}
-                  <a href="https://distube.js.org" target="_blank">
+                  <a
+                    href="https://distube.js.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span className="text-color-primary">DisTube</span>
                   </a>{" "}
                   core (a functional library for music). It provides high
@@ -141,6 +154,7 @@ const Projects = ({
                       wideMobile
                       href="https://top.gg/bot/804616628359921684"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Visit
                     </Button>

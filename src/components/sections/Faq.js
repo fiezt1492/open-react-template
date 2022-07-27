@@ -1,5 +1,5 @@
 import React from "react";
-import ReactLoading from "react-loading";
+// import ReactLoading from "react-loading";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
@@ -42,7 +42,7 @@ const Faq = ({
     bottomDivider && "has-bottom-divider"
   );
 
-  const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
+  // const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   return (
     <section {...props} className={outerClasses}>

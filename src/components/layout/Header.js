@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from "./partials/Logo";
 import SmoothScroll from "../elements/SmoothScroll";
 
@@ -35,7 +35,6 @@ const Header = ({
   const nav = useRef(null);
   const hamburger = useRef(null);
   const history = useHistory();
-  const location = useLocation();
 
   useEffect(() => {
     isActive && openMenu();
@@ -84,12 +83,6 @@ const Header = ({
   const pathHome = () => {
     let path = `home`;
     history.push(path);
-  };
-
-  const scrollToRef = (ref) => {
-    closeMenu();
-    if (location.pathname !== "/home") pathHome();
-    else ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
