@@ -71,9 +71,9 @@ const Hero = ({
                 We have wings!
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
+                <ButtonGroup wideMobile>
                   <SmoothScroll to="recard">
-                    <Button tag="a" color="primary" wideMobile>
+                    <Button color="primary">
                       Get started
                     </Button>
                   </SmoothScroll>
@@ -81,8 +81,8 @@ const Hero = ({
                   <Button
                     tag="a"
                     color="dark"
-                    wideMobile
                     href="https://playerduo.com/owlvernyte"
+                    target="_blank"
                   >
                     Support us
                   </Button>

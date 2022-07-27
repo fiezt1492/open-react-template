@@ -55,17 +55,15 @@ const AboutUs = ({
             >
               NOT <span className="text-color-primary">FOUND</span>
             </h1>
-          </div>
-          <div className="center-content">
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               There is nothing here.
             </p>
-          </div>
-          <div className="center-content">
             <ButtonGroup className="reveal-from-bottom" data-reveal-delay="600">
-              <Button wideMobile onClick={() => history.goBack()}>
-                Back
+              <Button wideMobile tag="a" color="primary" href="/">
+                Home
               </Button>
+
+              <Button wideMobile onClick={() => history.goBack()}>Back</Button>
             </ButtonGroup>
           </div>
         </div>

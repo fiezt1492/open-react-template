@@ -49,7 +49,7 @@ const VoteCard = ({ className, data, children, tag, ...props }) => {
         data.author &&
         data.timestamp && (
           <div {...props} className={classes}>
-            <div className="tiles-wrap ">
+            <div className="tiles-wrap">
               <div className="tiles-item">
                 <div className="tiles-item-inner">
                   <div className="features-tiles-item-content">
