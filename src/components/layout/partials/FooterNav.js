@@ -16,6 +16,9 @@ const FooterNav = ({ className, ...props }) => {
           <Link to="/faq">FAQ</Link>
         </li>
         <li>
+          <Link to="/votes">Votes</Link>
+        </li>
+        <li>
           <Link to="/team">Team</Link>
         </li>
         <li title="Go to the top of this page">

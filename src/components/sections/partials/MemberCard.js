@@ -22,7 +22,7 @@ const defaultProps = {
   tag: "h2",
 };
 
-const SectionHeader = ({ className, data, children, tag, ...props }) => {
+const MemberCard = ({ className, data, children, tag, ...props }) => {
   const classes = classNames(className);
 
   // const Component = tag;
@@ -51,7 +51,10 @@ const SectionHeader = ({ className, data, children, tag, ...props }) => {
                   <p className="m-0">{data.rank}</p>
                 </div>
                 <div className="testimonial-item-footer text-xs  mb-0 has-top-divider">
-                  <span title="Synced with Discord API" className="testimonial-item-name text-color-high">
+                  <span
+                    title="Synced with Discord API"
+                    className="testimonial-item-name text-color-high"
+                  >
                     {data.username}#{data.discriminator}
                   </span>
                   <span className="text-color-low"> | </span>
@@ -69,7 +72,7 @@ const SectionHeader = ({ className, data, children, tag, ...props }) => {
   );
 };
 
-SectionHeader.propTypes = propTypes;
-SectionHeader.defaultProps = defaultProps;
+MemberCard.propTypes = propTypes;
+MemberCard.defaultProps = defaultProps;
 
-export default SectionHeader;
+export default MemberCard;

@@ -1,10 +1,10 @@
 import React from "react";
-import Testimonial from "../components/sections/Testimonial";
+import Faq from "../components/sections/Faq";
 
 const Contact = () => {
   return (
     <>
-      <Testimonial topDivider />
+      <Faq topDivider />
     </>
   );
 };

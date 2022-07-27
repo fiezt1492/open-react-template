@@ -12,6 +12,7 @@ import Home from "./views/Home";
 import Faq from "./views/Faq";
 import Team from "./views/Team";
 import NotFound from "./views/NotFound";
+import VoteTracker from "./views/VoteTracker";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -44,11 +45,17 @@ const App = () => {
             component={Home}
             layout={LayoutDefault}
           />
-          {/* <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} /> */}
+          <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
           <AppRoute
             exact
             path="/team"
             component={Team}
+            layout={LayoutDefault}
+          />
+          <AppRoute
+            exact
+            path="/votes"
+            component={VoteTracker}
             layout={LayoutDefault}
           />
           <AppRoute
