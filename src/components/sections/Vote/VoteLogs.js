@@ -3,8 +3,8 @@ import ReactLoading from "react-loading";
 // import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { SectionProps } from "../../utils/SectionProps";
-import VoteCard from "./partials/VoteCard";
+import { SectionProps } from "../../../utils/SectionProps";
+import VoteCard from "../partials/VoteCard";
 // import ButtonGroup from "../elements/ButtonGroup";
 // import Button from "../elements/Button";
 
@@ -32,7 +32,7 @@ const VoteLogs = ({
   const [isLoading, setIsLoading] = React.useState(false);
 
   const outerClasses = classNames(
-    "testimonial section",
+    "section center-content",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",

@@ -1,5 +1,5 @@
 import React from "react";
-import Faq from "../components/sections/Faq";
+import Faq from "../components/sections/Faq/Faq";
 
 const Contact = () => {
   return (

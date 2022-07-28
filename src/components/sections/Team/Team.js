@@ -2,8 +2,8 @@ import React from "react";
 import ReactLoading from "react-loading";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { SectionProps } from "../../utils/SectionProps";
-import MemberCard from "./partials/MemberCard";
+import { SectionProps } from "../../../utils/SectionProps";
+import MemberCard from "../partials/MemberCard";
 
 const propTypes = {
   children: PropTypes.node,
@@ -30,7 +30,7 @@ const Team = ({
   const [isLoading, setIsLoading] = React.useState(false);
 
   const outerClasses = classNames(
-    "testimonial section",
+    "section center-content",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",

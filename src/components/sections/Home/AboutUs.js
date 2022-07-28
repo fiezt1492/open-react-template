@@ -1,9 +1,8 @@
 import React from "react";
-// import ReactLoading from "react-loading";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { SectionProps } from "../../utils/SectionProps";
-// import MemberCard from "./partials/MemberCard";
+import { SectionProps } from "../../../utils/SectionProps";
+import SectionHeader from "../partials/SectionHeader";
 
 const propTypes = {
   children: PropTypes.node,
@@ -15,8 +14,11 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-const Faq = ({
+// const ref = React.createRef();
+
+const AboutUs = ({
   className,
+  // children,
   topOuterDivider,
   bottomOuterDivider,
   topDivider,
@@ -26,9 +28,8 @@ const Faq = ({
   pushLeft,
   ...props
 }) => {
-
   const outerClasses = classNames(
-    "testimonial section",
+    "section center-content",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",
@@ -44,27 +45,25 @@ const Faq = ({
 
   // const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
+  const sectionHeader = {
+    title: "About us",
+    paragraph:
+      "Ummm. Seem like we have nothing here. We're still building our story!",
+  };
+
   return (
     <section {...props} className={outerClasses}>
-      <div className="container">
+      <div id="about-us" className="container">
         <div className={innerClasses}>
-          <div
-            className="center-content reveal-from-bottom"
-            data-reveal-delay="200"
-          >
-            <h1 className="mt-0 mb-16">
-              Frequently Asked{" "}
-              <span className="text-color-primary">Questions</span>
-            </h1>
-            <p>Have not do anything yet.</p>
-          </div>
+          <SectionHeader data={sectionHeader} className="center-content" />
         </div>
       </div>
     </section>
   );
 };
 
-Faq.propTypes = propTypes;
-Faq.defaultProps = defaultProps;
+AboutUs.propTypes = propTypes;
+AboutUs.defaultProps = defaultProps;
+// AboutUs.ref = ref;
 
-export default Faq;
+export default AboutUs;

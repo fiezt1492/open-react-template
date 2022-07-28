@@ -1,8 +1,9 @@
 import React from "react";
+// import ReactLoading from "react-loading";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { SectionProps } from "../../utils/SectionProps";
-import SectionHeader from "./partials/SectionHeader";
+import { SectionProps } from "../../../utils/SectionProps";
+// import MemberCard from "./partials/MemberCard";
 
 const propTypes = {
   children: PropTypes.node,
@@ -14,11 +15,8 @@ const defaultProps = {
   ...SectionProps.defaults,
 };
 
-// const ref = React.createRef();
-
-const AboutUs = ({
+const Faq = ({
   className,
-  // children,
   topOuterDivider,
   bottomOuterDivider,
   topDivider,
@@ -28,6 +26,7 @@ const AboutUs = ({
   pushLeft,
   ...props
 }) => {
+
   const outerClasses = classNames(
     "testimonial section",
     topOuterDivider && "has-top-divider",
@@ -45,25 +44,27 @@ const AboutUs = ({
 
   // const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
-  const sectionHeader = {
-    title: "About us",
-    paragraph:
-      "Ummm. Seem like we have nothing here. We're still building our story!",
-  };
-
   return (
     <section {...props} className={outerClasses}>
-      <div id="about-us" className="container">
+      <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <div
+            className="center-content reveal-from-bottom"
+            data-reveal-delay="200"
+          >
+            <h1 className="mt-0 mb-16">
+              Frequently Asked{" "}
+              <span className="text-color-primary">Questions</span>
+            </h1>
+            <p>Have not do anything yet.</p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-AboutUs.propTypes = propTypes;
-AboutUs.defaultProps = defaultProps;
-// AboutUs.ref = ref;
+Faq.propTypes = propTypes;
+Faq.defaultProps = defaultProps;
 
-export default AboutUs;
+export default Faq;

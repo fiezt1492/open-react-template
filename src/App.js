@@ -13,6 +13,8 @@ import Faq from "./views/Faq";
 import Team from "./views/Team";
 import NotFound from "./views/NotFound";
 import VoteTracker from "./views/VoteTracker";
+import Recard from "./views/projects/Recard";
+import Hoot from "./views/projects/Hoot";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -64,6 +66,23 @@ const App = () => {
             component={NotFound}
             layout={LayoutDefault}
           />
+
+
+
+          <AppRoute
+            exact
+            path="/projects/recard"
+            component={Recard}
+            layout={LayoutDefault}
+          />
+          <AppRoute
+            exact
+            path="/projects/hoot"
+            component={Hoot}
+            layout={LayoutDefault}
+          />
+
+          <Redirect exact from="/projects" to="/home#projects" />
           <Redirect exact from="/" to="/home" />
           <Redirect exact from="*" to="/not-found" />
         </Switch>

@@ -1,9 +1,9 @@
 import React from "react";
 
 // import sections
-import Hero from "../components/sections/Hero";
-import Projects from "../components/sections/Projects";
-import AboutUs from "../components/sections/AboutUs";
+import Hero from "../components/sections/Home/Hero";
+import Projects from "../components/sections/Home/Projects";
+import AboutUs from "../components/sections/Home/AboutUs";
 
 const Home = () => {
   return (

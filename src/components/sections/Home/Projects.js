@@ -1,11 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
-import { SectionSplitProps } from "../../utils/SectionProps";
-import SectionHeader from "./partials/SectionHeader";
-import Image from "../elements/Image";
-import ButtonGroup from "../elements/ButtonGroup";
-import Button from "../elements/Button";
+import { SectionSplitProps } from "../../../utils/SectionProps";
+import SectionHeader from "../partials/SectionHeader";
+import Image from "../../elements/Image";
+// import ButtonGroup from "../../elements/ButtonGroup";
+import Button from "../../elements/Button";
 
 const propTypes = {
   ...SectionSplitProps.types,
@@ -86,18 +86,11 @@ const Projects = ({
                   desktop.
                 </p>
                 <div className="center-content mt-16">
-                  <ButtonGroup>
-                    <Button
-                      tag="a"
-                      color="primary"
-                      wideMobile
-                      href="https://top.gg/bot/853623967180259369"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <Link to="projects/hoot">
+                    <Button color="primary" wideMobile>
                       Visit
                     </Button>
-                  </ButtonGroup>
+                  </Link>
                 </div>
               </div>
               <div
@@ -108,7 +101,7 @@ const Projects = ({
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/recard.png")}
+                  src={require("../../../assets/images/recard.png")}
                   alt="Features split 01"
                   width={528}
                   height={396}
@@ -147,18 +140,11 @@ const Projects = ({
                   playlist, music panel and more!
                 </p>
                 <div className="center-content mt-16">
-                  <ButtonGroup>
-                    <Button
-                      tag="a"
-                      color="primary"
-                      wideMobile
-                      href="https://top.gg/bot/804616628359921684"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <Link to="projects/hoot">
+                    <Button color="primary" wideMobile>
                       Visit
                     </Button>
-                  </ButtonGroup>
+                  </Link>
                 </div>
               </div>
               <div
@@ -169,7 +155,7 @@ const Projects = ({
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/hoot.png")}
+                  src={require("../../../assets/images/hoot.png")}
                   alt="Features split 02"
                   width={528}
                   height={396}
