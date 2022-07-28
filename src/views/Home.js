@@ -8,9 +8,14 @@ import AboutUs from "../components/sections/Home/AboutUs";
 const Home = () => {
   return (
     <>
-      <Hero className="illustration-section-01" topDivider bottomDivider />
-      <AboutUs bottomDivider />
-      <Projects bottomDivider invertMobile imageFill className="illustration-section-02" />
+      <Hero className="illustration-section-01" />
+      <AboutUs topDivider />
+      <Projects
+        topDivider
+        invertMobile
+        imageFill
+        className="illustration-section-02"
+      />
     </>
   );
 };

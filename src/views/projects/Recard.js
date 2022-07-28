@@ -6,7 +6,7 @@ import Hero from "../../components/sections/Products/Recard";
 const Recard = () => {
   return (
     <>
-      <Hero className="illustration-section-01" topDivider bottomDivider />
+      <Hero className="illustration-section-01" />
     </>
   );
 };
