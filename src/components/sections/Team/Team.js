@@ -30,7 +30,7 @@ const Team = ({
   const [isLoading, setIsLoading] = React.useState(false);
 
   const outerClasses = classNames(
-    "section center-content",
+    "testimonial section center-content",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",
