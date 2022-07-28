@@ -86,7 +86,7 @@ const Projects = ({
                   desktop.
                 </p>
                 <div className="center-content mt-16">
-                  <Link to="projects/hoot">
+                  <Link to="projects/recard">
                     <Button color="primary" wideMobile>
                       Visit
                     </Button>

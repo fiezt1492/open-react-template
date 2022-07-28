@@ -1,12 +1,12 @@
 import React from "react";
-import Faq from "../components/sections/Faq/Faq";
+import FaqSection from "../components/sections/Faq/Faq";
 
-const Contact = () => {
+const Faq = () => {
   return (
     <>
-      <Faq topDivider />
+      <FaqSection topDivider />
     </>
   );
 };
 
-export default Contact;
+export default Faq;
