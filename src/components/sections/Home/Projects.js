@@ -127,7 +127,7 @@ const Projects = ({
                   </a>
                 </h3>
                 <p className="m-0">
-                  It basically serving music for gamers on Discord! Created with{" "}
+                  It basically serves music for gamers on Discord! Created with{" "}
                   <a
                     href="https://distube.js.org"
                     target="_blank"
