@@ -48,7 +48,7 @@ const Team = ({
 
   const getMembers = () => {
     setIsLoading(true);
-    fetch("https://activity.fiezt1492.repl.co/api/teams")
+    fetch("/api/teams")
       .then((response) => response.json())
       .then((data) => {
         if (data.success)

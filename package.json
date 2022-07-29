@@ -13,6 +13,7 @@
     "react-scripts": "^3.4.1",
     "sass": "^1.49.7"
   },
+  "proxy": "https://activity.fiezt1492.repl.co",
   "repository": {
     "type": "git",
     "url": "https://github.com/cruip/open-react-template.git"
