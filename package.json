@@ -17,6 +17,7 @@
     "type": "git",
     "url": "https://github.com/cruip/open-react-template.git"
   },
+  "proxy": "https://activity.fiezt1492.repl.co",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
