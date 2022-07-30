@@ -47,7 +47,7 @@ const VoteLogs = ({
   );
 
   const getVotes = () => {
-    const apiToFetch = `${require("../../../../package.json").proxy}/api/votes`;
+    const apiToFetch = `https://activity.fiezt1492.repl.co/api/votes`;
     setIsLoading(true);
     fetch(apiToFetch)
       .then((response) => response.json())

@@ -47,7 +47,7 @@ const Team = ({
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const getMembers = () => {
-    const apiToFetch = `${require("../../../../package.json").proxy}/api/teams`;
+    const apiToFetch = `https://activity.fiezt1492.repl.co/api/teams`;
     setIsLoading(true);
     fetch(apiToFetch)
       .then((response) => response.json())
