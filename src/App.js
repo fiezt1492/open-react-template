@@ -15,7 +15,6 @@ import NotFound from "./views/NotFound";
 import VoteTracker from "./views/VoteTracker";
 import Recard from "./views/projects/Recard";
 import Hoot from "./views/projects/Hoot";
-
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 

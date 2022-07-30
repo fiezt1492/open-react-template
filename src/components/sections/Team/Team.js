@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { SectionProps } from "../../../utils/SectionProps";
 import MemberCard from "../partials/MemberCard";
+// import * as dotenv from "dotenv";
 
+// dotenv.config();
 const propTypes = {
   children: PropTypes.node,
   ...SectionProps.types,
@@ -47,8 +49,10 @@ const Team = ({
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const getMembers = () => {
+    const apiToFetch = `${process.env.API}/api/teams`
+    console.log(apiToFetch);
     setIsLoading(true);
-    fetch(`${process.env.API}/api/teams`)
+    fetch(apiToFetch)
       .then((response) => response.json())
       .then((data) => {
         if (data.success)
