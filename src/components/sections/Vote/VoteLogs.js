@@ -47,8 +47,9 @@ const VoteLogs = ({
   );
 
   const getVotes = () => {
+    const apiToFetch = `${process.env.REACT_APP_UNSPLASH_URL}/api/votes`
     setIsLoading(true);
-    fetch(`${process.env.API}/api/votes`)
+    fetch(apiToFetch)
       .then((response) => response.json())
       .then((data) => {
         if (data.success)
