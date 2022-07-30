@@ -48,7 +48,7 @@ const VoteLogs = ({
 
   const getVotes = () => {
     setIsLoading(true);
-    fetch("/api/votes")
+    fetch(`${process.env.API}/api/votes`)
       .then((response) => response.json())
       .then((data) => {
         if (data.success)

@@ -48,7 +48,7 @@ const Team = ({
 
   const getMembers = () => {
     setIsLoading(true);
-    fetch("/api/teams")
+    fetch(`${process.env.API}/api/teams`)
       .then((response) => response.json())
       .then((data) => {
         if (data.success)
