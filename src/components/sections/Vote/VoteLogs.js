@@ -56,7 +56,7 @@ const VoteLogs = ({
           return data.data.map((successObject) => {
             const date = new Date(successObject.timestamp);
             const { embed } = successObject;
-            console.log(embed);
+            // console.log(embed);
             const data = {
               timestamp: date.toLocaleDateString(),
               thumbnail: embed.thumbnail.url,
