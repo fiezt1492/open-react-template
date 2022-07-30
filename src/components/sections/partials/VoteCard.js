@@ -34,7 +34,7 @@ const VoteCard = ({ className, data, children, tag, ...props }) => {
   const count = embedTitle.shift();
   const voter = embedTitle.shift().replace(/\s/g, "");
 
-  console.log(data.thumbnail);
+  // console.log(data.thumbnail);
 
   // const onImageError = () => (imgRef.current.src = "https://cdn.discordapp.com/embed/avatars/3.png");
   // .replace(/[\`|*]/g, "")
