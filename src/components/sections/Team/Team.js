@@ -47,7 +47,7 @@ const Team = ({
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const getMembers = () => {
-    const apiToFetch = `${process.env.REACT_APP_UNSPLASH_URL}/api/teams`;
+    const apiToFetch = `${require("../../../../package.json").proxy}/api/teams`;
     setIsLoading(true);
     fetch(apiToFetch)
       .then((response) => response.json())
